@@ -46,7 +46,7 @@ a:hover { color: var(--terracotta); }
 /* Kop */
 
 .site-header {
-  padding: 22px 0;
+  padding: 26px 0 10px;
 }
 
 .site-header .wrap {
@@ -56,12 +56,12 @@ a:hover { color: var(--terracotta); }
   gap: 24px;
 }
 
-.brand img { height: 46px; width: auto; }
+.brand img { height: 100px; width: auto; }
 
 .nav {
   display: flex;
-  gap: 28px;
-  font-size: 0.95rem;
+  gap: 30px;
+  font-size: 1rem;
 }
 
 .nav a {
@@ -91,7 +91,7 @@ h1, h2, h3 {
   letter-spacing: -0.01em;
 }
 
-h1 { font-size: clamp(2.2rem, 5.2vw, 3.6rem); }
+h1 { font-size: clamp(2.4rem, 5.6vw, 4.2rem); }
 h2 { font-size: clamp(1.7rem, 3.4vw, 2.3rem); }
 h3 { font-size: 1.25rem; }
 
@@ -122,14 +122,23 @@ p { margin: 0 0 1em; }
 .btn.ghost { background: transparent; color: var(--brick); }
 .btn.ghost:hover { background: var(--brick); border-color: var(--brick); color: var(--paper-light); }
 
+/* Etsy-knop die nog niet klikbaar is */
+
+.btn.soon {
+  background: transparent;
+  border: 2px dashed var(--muted);
+  color: var(--muted);
+  cursor: default;
+}
+
 /* Hero */
 
-.hero { padding: 40px 0 72px; }
+.hero { padding: 36px 0 88px; }
 
 .hero .wrap {
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  gap: 56px;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
   align-items: center;
 }
 
@@ -155,18 +164,34 @@ p { margin: 0 0 1em; }
 
 .photo { margin: 0; }
 
-.photo img {
+.arch {
+  position: relative;
+  width: min(100%, 520px);
+  margin: 0 auto 0 auto;
+}
+
+.arch::before {
+  content: "";
+  position: absolute;
+  inset: 22px -22px -22px 22px;
+  border-radius: 999px 999px 28px 28px;
+  background: var(--terracotta);
+  opacity: 0.9;
+}
+
+.arch img {
+  position: relative;
   width: 100%;
   height: auto;
   aspect-ratio: 3 / 4;
   object-fit: cover;
-  border-radius: var(--radius);
-  border: 1px solid var(--line);
-  box-shadow: 0 18px 40px -22px rgba(70, 49, 40, 0.5);
+  border-radius: 999px 999px 28px 28px;
+  box-shadow: 0 24px 50px -26px rgba(70, 49, 40, 0.6);
 }
 
 .photo figcaption {
-  padding-top: 12px;
+  width: min(100%, 520px);
+  margin: 40px auto 0;
   font-size: 0.85rem;
   color: var(--muted);
 }
@@ -179,17 +204,38 @@ p { margin: 0 0 1em; }
   border: 1px solid var(--line);
 }
 
-.shelf .row {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 4%;
+.shelf .grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr) 1px 1fr;
+  column-gap: 4%;
+  align-items: end;
 }
 
-.tower { width: 17%; height: auto; flex: none; filter: drop-shadow(0 0 0.6px rgba(70, 49, 40, 0.5)); }
+.shelf .divider {
+  align-self: stretch;
+  margin-bottom: -2px;
+  background: var(--line);
+}
+
+.shelf .label {
+  grid-row: 2;
+  margin-top: 14px;
+  padding-bottom: 14px;
+  color: var(--brick);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.shelf .label.classic { grid-column: 1 / 5; }
+.shelf .label.premium { grid-column: 6; }
+
+.tower { width: 100%; height: auto; filter: drop-shadow(0 0 0.6px rgba(70, 49, 40, 0.5)); }
 
 .plinth {
-  height: 14px;
+  height: 3px;
   margin: 0 -28px;
   background: linear-gradient(var(--line), rgba(70, 49, 40, 0.06));
 }
@@ -224,6 +270,8 @@ section { padding: 72px 0; }
 
 .showcase .cards { grid-template-columns: 1fr; }
 .showcase .shelf { background: var(--paper); }
+
+.cta { margin-top: 24px; }
 
 .note {
   margin: 32px 0 0;
@@ -278,6 +326,10 @@ section { padding: 72px 0; }
   border-radius: 50%;
   border: 1px solid rgba(70, 49, 40, 0.25);
   background: var(--c);
+}
+
+.swatches i.split {
+  background: linear-gradient(45deg, #c8241c 50%, #fbfaf6 50%);
 }
 
 .steps {
@@ -393,7 +445,7 @@ section { padding: 72px 0; }
 }
 
 .site-footer .id { display: flex; align-items: center; gap: 14px; color: var(--muted); }
-.site-footer img { height: 44px; width: auto; }
+.site-footer img { height: 70px; width: auto; }
 .site-footer nav { display: flex; gap: 22px; }
 
 /* Tekstpagina (privacy) */
@@ -408,12 +460,14 @@ section { padding: 72px 0; }
 /* Smal scherm */
 
 @media (max-width: 860px) {
-  .hero { padding: 16px 0 48px; }
+  .hero { padding: 12px 0 56px; }
+  .arch { width: min(100%, 440px); }
   .hero .wrap { grid-template-columns: 1fr; gap: 40px; }
   section { padding: 52px 0; }
   .cards, .steps, .showcase, .business { grid-template-columns: 1fr; }
   .business { gap: 32px; }
-  .photo img { aspect-ratio: 4 / 5; }
+  .arch::before { inset: 16px -12px -16px 12px; }
+  .brand img { height: 84px; }
   .contact { grid-template-columns: 1fr; padding: 32px 24px; }
   .card { padding: 26px 22px; }
 }
@@ -425,7 +479,7 @@ section { padding: 72px 0; }
 
 @media (max-width: 520px) {
   .nav { gap: 16px; font-size: 0.9rem; }
-  .brand img { height: 38px; }
+  .brand img { height: 68px; }
   .shelf { padding: 24px 16px 0; }
   .plinth { margin: 0 -16px; }
   .contact .btn { font-size: 0.85rem; padding-inline: 18px; text-align: center; overflow-wrap: anywhere; }
