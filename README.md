@@ -6,7 +6,7 @@ Website van Studio Rossa, live op https://studiorossa.nl via GitHub Pages (tak `
 
 | Bestand | Inhoud |
 |---|---|
-| `index.html` | Startpagina: Domtoren, uitvoeringen, maten en kleuren op verzoek, bedrijvensectie, werkwijze, contact en uitleg Studio Rossa MCP. |
+| `index.html` | Startpagina: Domtoren, uitvoeringen, maten en kleuren op verzoek, bedrijvensectie, de maker, contact en uitleg Studio Rossa MCP. |
 | `privacy.html` | Privacyverklaring, inclusief het onderdeel Studio Rossa MCP. |
 | `style.css` | Alle opmaak. Kleuren staan bovenaan als variabelen. |
 | `assets/` | Logo, merkteken, favicons en deelafbeelding, gemaakt uit de artwork in Drive (Marketing/Artwork), plus de productfoto `premium-domtoren.jpg` (zonder EXIF/locatie). |
