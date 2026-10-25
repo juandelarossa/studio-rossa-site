@@ -3,27 +3,181 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Studio Rossa</title>
-<meta name="description" content="Studio Rossa maakt Domtorens van 22 cm, zelf ontworpen en geprint in Utrecht.">
+<title>Studio Rossa | Domtorens uit Utrecht, zelf ontworpen en geprint</title>
+<meta name="description" content="Studio Rossa maakt Domtorens uit Utrecht, zelf ontworpen en geprint op een 3D-printer. Binnenkort via Etsy, eerst alleen in Nederland.">
+<meta name="theme-color" content="#f5ebd9">
+<link rel="canonical" href="https://studiorossa.nl/">
+<link rel="icon" type="image/png" sizes="48x48" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nl_NL">
+<meta property="og:site_name" content="Studio Rossa">
+<meta property="og:title" content="Studio Rossa | Domtorens uit Utrecht">
+<meta property="og:description" content="Domtorens uit Utrecht, zelf ontworpen en geprint. Binnenkort via Etsy.">
+<meta property="og:url" content="https://studiorossa.nl/">
+<meta property="og:image" content="https://studiorossa.nl/assets/og-image.png">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<!-- De Domtoren als vlakke illustratie. Kleuren worden per toren ingesteld met --t (lichaam) en --d (details). -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="domtoren" viewBox="0 0 90 440">
+    <g fill="var(--t)">
+      <path d="M45 0 L49 18 H41 Z"/>
+      <rect x="30" y="18" width="30" height="44"/>
+      <rect x="24" y="60" width="42" height="6"/>
+      <rect x="14" y="66" width="62" height="92"/>
+      <path d="M14 66 L18 48 L22 66 Z"/>
+      <path d="M68 66 L72 48 L76 66 Z"/>
+      <rect x="10" y="156" width="70" height="6"/>
+      <rect x="8" y="162" width="74" height="140"/>
+      <rect x="4" y="300" width="82" height="6"/>
+      <rect x="0" y="306" width="90" height="134"/>
+    </g>
+    <g fill="var(--d)">
+      <path d="M35 54 V32 a4 4 0 0 1 8 0 V54 Z"/>
+      <path d="M47 54 V32 a4 4 0 0 1 8 0 V54 Z"/>
+      <path d="M22 148 V104 Q22 88 30 80 Q38 88 38 104 V148 Z"/>
+      <path d="M52 148 V104 Q52 88 60 80 Q68 88 68 104 V148 Z"/>
+      <path d="M18 290 V204 Q18 192 22 188 Q26 192 26 204 V290 Z"/>
+      <path d="M41 290 V204 Q41 192 45 188 Q49 192 49 204 V290 Z"/>
+      <path d="M64 290 V204 Q64 192 68 188 Q72 192 72 204 V290 Z"/>
+      <path d="M31 440 V372 Q31 346 45 330 Q59 346 59 372 V440 Z"/>
+      <path d="M8 384 V352 Q8 344 12 340 Q16 344 16 352 V384 Z"/>
+      <path d="M74 384 V352 Q74 344 78 340 Q82 344 82 352 V384 Z"/>
+    </g>
+  </symbol>
+</svg>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="./" aria-label="Studio Rossa, naar de startpagina">
+      <img src="assets/logo.png" width="154" height="46" alt="Studio Rossa">
+    </a>
+    <nav class="nav" aria-label="Hoofdmenu">
+      <a href="#domtoren">Domtoren</a>
+      <a href="#werkwijze">Werkwijze</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
 <main>
-  <h1>Studio Rossa</h1>
-  <p class="lead">Domtorens uit Utrecht, zelf ontworpen en geprint.</p>
+  <section class="hero" aria-labelledby="titel">
+    <div class="wrap">
+      <div>
+        <p class="kicker">Utrecht &middot; 3D-geprint</p>
+        <h1 id="titel">Domtorens uit Utrecht, zelf ontworpen en geprint.</h1>
+        <p class="lead">Studio Rossa is een kleine studio in Utrecht. Ik ontwerp miniaturen van de Domtoren en print ze zelf, één voor één.</p>
+        <p class="status">Binnenkort via Etsy, eerst alleen in Nederland</p>
+        <div class="actions">
+          <a class="btn" href="#domtoren">Bekijk de uitvoeringen</a>
+          <a class="btn ghost" href="#contact">Neem contact op</a>
+        </div>
+      </div>
 
-  <p>Studio Rossa is een kleine studio in Utrecht. Ik maak miniaturen van de Domtoren van 22 cm hoog, met een 3D-printer, op basis van mijn eigen ontwerp. De Classic is er in groen, terracotta, zandkleur en lila. De Utrecht Edition is rood-wit.</p>
+      <figure class="shelf" role="img" aria-label="Illustratie van de Domtoren in vijf kleuren">
+        <div class="row" aria-hidden="true">
+          <svg class="tower" viewBox="0 0 90 440" style="--t:#6f8f6a;--d:#3f5a3d"><use href="#domtoren"/></svg>
+          <svg class="tower" viewBox="0 0 90 440" style="--t:#c0503a;--d:#7a2a1c"><use href="#domtoren"/></svg>
+          <svg class="tower" viewBox="0 0 90 440" style="--t:#d8bd90;--d:#a58654"><use href="#domtoren"/></svg>
+          <svg class="tower" viewBox="0 0 90 440" style="--t:#a794c2;--d:#6a5888"><use href="#domtoren"/></svg>
+          <svg class="tower" viewBox="0 0 90 440" style="--t:#a8281c;--d:#fbf5ea"><use href="#domtoren"/></svg>
+        </div>
+        <div class="plinth" aria-hidden="true"></div>
+        <figcaption>Illustratie, geen productfoto. De kleuren zijn een indicatie.</figcaption>
+      </figure>
+    </div>
+  </section>
 
-  <p>De Domtorens worden binnenkort verkocht via Etsy, eerst alleen binnen Nederland.</p>
+  <section id="domtoren" class="alt" aria-labelledby="domtoren-titel">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">De Domtoren</p>
+        <h2 id="domtoren-titel">Twee uitvoeringen van hetzelfde ontwerp</h2>
+        <p>Een miniatuur van de Domtoren, ontworpen op 22 cm hoog. Voor op de kast, de vensterbank of als cadeau voor iemand die van Utrecht houdt.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <p class="tag">Classic</p>
+          <h3>In vier kleuren</h3>
+          <p>De Classic is er in groen, terracotta, zandkleur en lila.</p>
+          <ul class="swatches" aria-label="Kleuren van de Classic">
+            <li><i style="--c:#6f8f6a"></i>Groen</li>
+            <li><i style="--c:#c0503a"></i>Terracotta</li>
+            <li><i style="--c:#d8bd90"></i>Zandkleur</li>
+            <li><i style="--c:#a794c2"></i>Lila</li>
+          </ul>
+        </article>
+        <article class="card">
+          <p class="tag">Premium Utrecht Edition</p>
+          <h3>In rood en wit</h3>
+          <p>De Utrecht Edition draagt de kleuren van de stad: rood en wit.</p>
+          <ul class="swatches" aria-label="Kleuren van de Utrecht Edition">
+            <li><i style="--c:#a8281c"></i>Rood</li>
+            <li><i style="--c:#fbf5ea"></i>Wit</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
 
-  <h2>Contact</h2>
-  <p><a href="mailto:studiorossa.utrecht@gmail.com">studiorossa.utrecht@gmail.com</a></p>
+  <section id="werkwijze" aria-labelledby="werkwijze-titel">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Werkwijze</p>
+        <h2 id="werkwijze-titel">Klein gehouden, en dat is de bedoeling</h2>
+      </div>
+      <ol class="steps">
+        <li>
+          <h3>Ontworpen in Utrecht</h3>
+          <p>Het ontwerp is van mij, van het eerste idee tot het laatste detail van de toren.</p>
+        </li>
+        <li>
+          <h3>Zelf geprint</h3>
+          <p>Elke Domtoren komt uit mijn eigen 3D-printer. Ik print in kleine aantallen.</p>
+        </li>
+        <li>
+          <h3>Zelf gecontroleerd en verzonden</h3>
+          <p>Ik bekijk elke toren voordat hij de deur uitgaat, pak hem in en stuur hem zelf op.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
 
-  <h2>Studio Rossa MCP</h2>
-  <p>Studio Rossa MCP is een intern hulpmiddel van Studio Rossa. Het koppelt de eigen Google Drive-map van Studio Rossa aan Claude Code, zodat bedrijfsdocumenten, planningen en overzichten automatisch kunnen worden bijgewerkt. Het hulpmiddel wordt alleen door Studio Rossa zelf gebruikt en heeft geen toegang tot gegevens van andere Google-gebruikers. Meer hierover staat in de <a href="privacy.html#studio-rossa-mcp">privacyverklaring</a>.</p>
+  <section id="contact" class="alt" aria-labelledby="contact-titel">
+    <div class="wrap">
+      <div class="contact">
+        <div>
+          <h2 id="contact-titel">Een vraag, of benieuwd naar de Domtoren?</h2>
+          <p>Stuur me gerust een mail. Ik antwoord zelf.</p>
+        </div>
+        <a class="btn" href="mailto:studiorossa.utrecht@gmail.com">studiorossa.utrecht@gmail.com</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="mcp" aria-labelledby="mcp-titel">
+    <div class="wrap">
+      <h2 id="mcp-titel">Studio Rossa MCP</h2>
+      <p>Studio Rossa MCP is een intern hulpmiddel van Studio Rossa. Het koppelt de eigen Google Drive-map van Studio Rossa aan Claude Code, zodat bedrijfsdocumenten, planningen en overzichten automatisch kunnen worden bijgewerkt. Het hulpmiddel wordt alleen door Studio Rossa zelf gebruikt en heeft geen toegang tot gegevens van andere Google-gebruikers. Meer hierover staat in de <a href="privacy.html#studio-rossa-mcp">privacyverklaring</a>.</p>
+    </div>
+  </section>
 </main>
-<footer>
-  <a href="privacy.html">Privacyverklaring</a>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="id">
+      <img src="assets/mark.png" width="39" height="44" alt="">
+      <span>Studio Rossa, Utrecht</span>
+    </div>
+    <nav aria-label="Voettekst">
+      <a href="mailto:studiorossa.utrecht@gmail.com">Contact</a>
+      <a href="privacy.html">Privacyverklaring</a>
+    </nav>
+  </div>
 </footer>
+
 </body>
 </html>

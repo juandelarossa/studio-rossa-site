@@ -1,0 +1,21 @@
+# studio-rossa-site
+
+Website van Studio Rossa, live op https://studiorossa.nl via GitHub Pages (tak `main`, domein in `CNAME`).
+
+## Bestanden
+
+| Bestand | Inhoud |
+|---|---|
+| `index.html` | Startpagina: Domtoren, uitvoeringen, werkwijze, contact en uitleg Studio Rossa MCP. |
+| `privacy.html` | Privacyverklaring, inclusief het onderdeel Studio Rossa MCP. |
+| `style.css` | Alle opmaak. Kleuren staan bovenaan als variabelen. |
+| `assets/` | Logo, merkteken, favicons en deelafbeelding, gemaakt uit de artwork in Drive (Marketing/Artwork). |
+
+## Regels
+
+- Geen externe fonts, scripts of trackers. De site laadt alleen eigen bestanden, zodat de privacyverklaring klopt.
+- De uitleg over Studio Rossa MCP op de startpagina en in de privacyverklaring blijft staan. De Google-verificatie van de app verwijst ernaar.
+- Geen prijzen, levertijden of kwaliteitsclaims op de site voordat die zijn vastgesteld.
+- `main` is live. Wijzigingen gaan eerst via een branch en worden pas samengevoegd na akkoord van Johan.
+
+Aansturing en beleid staan in de repository `studio-rossa` (zie het onderdeel Website in `CLAUDE.md`).

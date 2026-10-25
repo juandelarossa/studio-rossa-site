@@ -1,58 +1,348 @@
-:root {
-  --bg: #fbf8f4;
-  --text: #2b2522;
-  --muted: #7a6f69;
-  --accent: #b5302a;
-}
+/* Studio Rossa
+   Palet uit de artwork: crème papier, terracotta, baksteenrood, donkerbruin.
+   Geen externe fonts of scripts: de site laadt alleen eigen bestanden. */
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #1d1a18;
-    --text: #efe9e4;
-    --muted: #a59a93;
-    --accent: #e0645c;
-  }
+:root {
+  --paper: #f5ebd9;
+  --paper-light: #fbf5ea;
+  --terracotta: #c0503a;
+  --brick: #993321;
+  --brown: #463128;
+  --muted: #6b5a4f;
+  --line: rgba(70, 49, 40, 0.14);
+  --radius: 20px;
+  --font: "Avenir Next", Montserrat, "Segoe UI", system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  color-scheme: light;
 }
 
 * { box-sizing: border-box; }
 
+html { scroll-behavior: smooth; }
+
 body {
   margin: 0;
-  background: var(--bg);
-  color: var(--text);
-  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--paper);
+  color: var(--brown);
+  font: 17px/1.65 var(--font);
+  -webkit-font-smoothing: antialiased;
 }
 
-main, footer {
-  max-width: 640px;
+img, svg { display: block; max-width: 100%; }
+
+a { color: var(--brick); text-underline-offset: 3px; }
+a:hover { color: var(--terracotta); }
+
+:focus-visible {
+  outline: 3px solid var(--terracotta);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.wrap {
+  width: min(1080px, 100% - 40px);
   margin: 0 auto;
-  padding: 0 16px;
 }
 
-main { padding-top: 56px; }
+/* Kop */
 
-h1 {
-  color: var(--accent);
-  font-size: 2.2rem;
-  margin: 0 0 4px;
+.site-header {
+  padding: 22px 0;
 }
 
-h2 {
-  font-size: 1.15rem;
-  margin: 36px 0 8px;
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
 }
 
-.lead { font-size: 1.2rem; margin-top: 0; }
+.brand img { height: 46px; width: auto; }
+
+.nav {
+  display: flex;
+  gap: 28px;
+  font-size: 0.95rem;
+}
+
+.nav a {
+  color: var(--brown);
+  text-decoration: none;
+  padding: 6px 0;
+  border-bottom: 2px solid transparent;
+}
+
+.nav a:hover { border-bottom-color: var(--terracotta); color: var(--brown); }
+
+/* Typografie */
+
+.kicker {
+  margin: 0 0 14px;
+  color: var(--brick);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  line-height: 1.15;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+h1 { font-size: clamp(2.2rem, 5.2vw, 3.6rem); }
+h2 { font-size: clamp(1.7rem, 3.4vw, 2.3rem); }
+h3 { font-size: 1.25rem; }
+
+p { margin: 0 0 1em; }
+
+.lead { font-size: 1.15rem; color: var(--muted); max-width: 34em; margin-top: 20px; }
 .muted { color: var(--muted); }
 
-a { color: var(--accent); }
+/* Knoppen */
 
-ul { padding-left: 20px; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
 
-footer {
-  margin-top: 56px;
-  padding-top: 16px;
-  padding-bottom: 40px;
-  border-top: 1px solid color-mix(in srgb, var(--muted) 30%, transparent);
+.btn {
+  display: inline-block;
+  padding: 13px 26px;
+  border-radius: 999px;
+  border: 2px solid var(--brick);
+  background: var(--brick);
+  color: var(--paper-light);
+  font-weight: 600;
+  font-size: 0.97rem;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.btn:hover { background: var(--brown); border-color: var(--brown); color: var(--paper-light); }
+
+.btn.ghost { background: transparent; color: var(--brick); }
+.btn.ghost:hover { background: var(--brick); border-color: var(--brick); color: var(--paper-light); }
+
+/* Hero */
+
+.hero { padding: 40px 0 72px; }
+
+.hero .wrap {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+  padding: 8px 16px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--paper-light);
   font-size: 0.9rem;
+}
+
+.status::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--terracotta);
+}
+
+.shelf {
+  margin: 0;
+  padding: 36px 28px 0;
+  border-radius: var(--radius);
+  background: var(--paper-light);
+  border: 1px solid var(--line);
+}
+
+.shelf .row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 4%;
+}
+
+.tower { width: 17%; height: auto; flex: none; }
+
+.plinth {
+  height: 14px;
+  margin: 0 -28px;
+  background: linear-gradient(var(--line), rgba(70, 49, 40, 0.06));
+}
+
+.shelf figcaption {
+  padding: 14px 0 18px;
+  font-size: 0.82rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* Secties */
+
+section { padding: 72px 0; }
+.alt { background: var(--paper-light); border-block: 1px solid var(--line); }
+
+.section-head { max-width: 40em; margin-bottom: 40px; }
+.section-head p { color: var(--muted); margin-top: 14px; }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.card {
+  padding: 32px;
+  border-radius: var(--radius);
+  background: var(--paper);
+  border: 1px solid var(--line);
+}
+
+.card .tag {
+  margin: 0 0 10px;
+  color: var(--brick);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.card h3 { margin-bottom: 10px; }
+.card p { color: var(--muted); }
+
+.swatches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 22px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.swatches li {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 6px 14px 6px 8px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--paper-light);
+  font-size: 0.9rem;
+}
+
+.swatches i {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1px solid rgba(70, 49, 40, 0.25);
+  background: var(--c);
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: stap;
+}
+
+.steps li {
+  padding: 28px 28px 8px 0;
+  border-top: 3px solid var(--terracotta);
+  counter-increment: stap;
+}
+
+.steps li::before {
+  content: "0" counter(stap);
+  display: block;
+  margin-bottom: 14px;
+  color: var(--brick);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+}
+
+.steps h3 { margin-bottom: 8px; }
+.steps p { color: var(--muted); }
+
+/* Contact */
+
+.contact {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 32px;
+  align-items: center;
+  padding: 40px;
+  border-radius: var(--radius);
+  background: var(--brown);
+  color: var(--paper);
+}
+
+.contact h2 { color: var(--paper-light); }
+.contact p { margin: 12px 0 0; color: #e3d5c0; }
+.contact .btn { background: var(--paper); border-color: var(--paper); color: var(--brown); }
+.contact .btn:hover { background: var(--terracotta); border-color: var(--terracotta); color: var(--paper-light); }
+
+/* MCP-uitleg, bewust rustig gehouden */
+
+.mcp { padding: 56px 0; }
+.mcp .wrap { max-width: 760px; }
+.mcp h2 { font-size: 1.3rem; margin-bottom: 12px; }
+.mcp p { color: var(--muted); font-size: 0.97rem; }
+
+/* Voet */
+
+.site-footer { padding: 40px 0 48px; border-top: 1px solid var(--line); font-size: 0.92rem; }
+
+.site-footer .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.site-footer .id { display: flex; align-items: center; gap: 14px; color: var(--muted); }
+.site-footer img { height: 44px; width: auto; }
+.site-footer nav { display: flex; gap: 22px; }
+
+/* Tekstpagina (privacy) */
+
+.doc { padding: 24px 0 72px; }
+.doc .wrap { max-width: 720px; }
+.doc h1 { font-size: clamp(2rem, 4.4vw, 2.8rem); margin-bottom: 8px; }
+.doc h2 { font-size: 1.25rem; margin: 40px 0 10px; }
+.doc ul { padding-left: 22px; }
+.doc li { margin-bottom: 4px; }
+
+/* Smal scherm */
+
+@media (max-width: 860px) {
+  .hero { padding: 16px 0 48px; }
+  .hero .wrap { grid-template-columns: 1fr; gap: 40px; }
+  section { padding: 52px 0; }
+  .cards, .steps { grid-template-columns: 1fr; }
+  .contact { grid-template-columns: 1fr; padding: 32px 24px; }
+  .card { padding: 26px 22px; }
+}
+
+@media (max-width: 520px) {
+  .nav { gap: 18px; font-size: 0.9rem; }
+  .brand img { height: 38px; }
+  .shelf { padding: 24px 16px 0; }
+  .plinth { margin: 0 -16px; }
+  .contact .btn { font-size: 0.85rem; padding-inline: 18px; text-align: center; overflow-wrap: anywhere; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .btn { transition: none; }
 }
