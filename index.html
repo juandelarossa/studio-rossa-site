@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Studio Rossa | Domtorens uit Utrecht, zelf ontworpen en geprint</title>
-<meta name="description" content="Studio Rossa maakt Domtorens uit Utrecht, zelf ontworpen en geprint op een 3D-printer. Binnenkort via Etsy, eerst alleen in Nederland.">
+<meta name="description" content="Studio Rossa maakt Domtorens uit Utrecht, zelf ontworpen en geprint op een 3D-printer. Standaard 22 cm, andere maten en kleuren op verzoek. Ook gepersonaliseerd voor bedrijven.">
 <meta name="theme-color" content="#f5ebd9">
 <link rel="canonical" href="https://studiorossa.nl/">
 <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon.png">
@@ -13,39 +13,45 @@
 <meta property="og:locale" content="nl_NL">
 <meta property="og:site_name" content="Studio Rossa">
 <meta property="og:title" content="Studio Rossa | Domtorens uit Utrecht">
-<meta property="og:description" content="Domtorens uit Utrecht, zelf ontworpen en geprint. Binnenkort via Etsy.">
+<meta property="og:description" content="Domtorens uit Utrecht, zelf ontworpen en geprint. Binnenkort via Etsy, ook gepersonaliseerd voor bedrijven.">
 <meta property="og:url" content="https://studiorossa.nl/">
-<meta property="og:image" content="https://studiorossa.nl/assets/og-image.png">
+<meta property="og:image" content="https://studiorossa.nl/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- De Domtoren als vlakke illustratie. Kleuren worden per toren ingesteld met --t (lichaam) en --d (details). -->
+<!-- De Domtoren als vlakke illustratie. Kleuren per toren met --t (lichaam) en --d (details).
+     De Premium Utrecht Edition gebruikt twee lagen met een diagonale clip, zoals de Utrechtse vlag. -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <clipPath id="vlag-rood"><polygon points="0,105 90,290 90,440 0,440"/></clipPath>
+  </defs>
   <symbol id="domtoren" viewBox="0 0 90 440">
     <g fill="var(--t)">
-      <path d="M45 0 L49 18 H41 Z"/>
-      <rect x="30" y="18" width="30" height="44"/>
-      <rect x="24" y="60" width="42" height="6"/>
-      <rect x="14" y="66" width="62" height="92"/>
-      <path d="M14 66 L18 48 L22 66 Z"/>
-      <path d="M68 66 L72 48 L76 66 Z"/>
-      <rect x="10" y="156" width="70" height="6"/>
-      <rect x="8" y="162" width="74" height="140"/>
-      <rect x="4" y="300" width="82" height="6"/>
-      <rect x="0" y="306" width="90" height="134"/>
+      <path d="M45 0 L50 22 H40 Z"/>
+      <path d="M22 22 L26 4 L30 22 Z"/>
+      <path d="M60 22 L64 4 L68 22 Z"/>
+      <rect x="22" y="22" width="46" height="100"/>
+      <rect x="16" y="120" width="58" height="5"/>
+      <rect x="10" y="125" width="70" height="111"/>
+      <rect x="3" y="234" width="84" height="5"/>
+      <rect x="0" y="239" width="90" height="201"/>
     </g>
     <g fill="var(--d)">
-      <path d="M35 54 V32 a4 4 0 0 1 8 0 V54 Z"/>
-      <path d="M47 54 V32 a4 4 0 0 1 8 0 V54 Z"/>
-      <path d="M22 148 V104 Q22 88 30 80 Q38 88 38 104 V148 Z"/>
-      <path d="M52 148 V104 Q52 88 60 80 Q68 88 68 104 V148 Z"/>
-      <path d="M18 290 V204 Q18 192 22 188 Q26 192 26 204 V290 Z"/>
-      <path d="M41 290 V204 Q41 192 45 188 Q49 192 49 204 V290 Z"/>
-      <path d="M64 290 V204 Q64 192 68 188 Q72 192 72 204 V290 Z"/>
-      <path d="M31 440 V372 Q31 346 45 330 Q59 346 59 372 V440 Z"/>
-      <path d="M8 384 V352 Q8 344 12 340 Q16 344 16 352 V384 Z"/>
-      <path d="M74 384 V352 Q74 344 78 340 Q82 344 82 352 V384 Z"/>
+      <path d="M27 108 V60 Q27 48 31 42 Q35 48 35 60 V108 Z"/>
+      <path d="M41 108 V60 Q41 48 45 42 Q49 48 49 60 V108 Z"/>
+      <path d="M55 108 V60 Q55 48 59 42 Q63 48 63 60 V108 Z"/>
+      <path d="M20 218 V158 Q20 146 26 138 Q32 146 32 158 V218 Z"/>
+      <path d="M39 218 V172 Q39 162 45 156 Q51 162 51 172 V218 Z"/>
+      <path d="M58 218 V158 Q58 146 64 138 Q70 146 70 158 V218 Z"/>
+      <path d="M7 430 V270 Q7 262 11 258 Q15 262 15 270 V430 Z"/>
+      <path d="M75 430 V270 Q75 262 79 258 Q83 262 83 270 V430 Z"/>
+      <path d="M26 292 V270 Q26 252 45 252 Q64 252 64 270 V292 Z"/>
+      <path d="M26 346 V324 Q26 306 45 306 Q64 306 64 324 V346 Z"/>
+      <path d="M24 440 V394 Q24 368 45 368 Q66 368 66 394 V440 Z"/>
     </g>
   </symbol>
 </svg>
@@ -57,6 +63,7 @@
     </a>
     <nav class="nav" aria-label="Hoofdmenu">
       <a href="#domtoren">Domtoren</a>
+      <a href="#bedrijven">Voor bedrijven</a>
       <a href="#werkwijze">Werkwijze</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -77,16 +84,10 @@
         </div>
       </div>
 
-      <figure class="shelf" role="img" aria-label="Illustratie van de Domtoren in vijf kleuren">
-        <div class="row" aria-hidden="true">
-          <svg class="tower" viewBox="0 0 90 440" style="--t:#6f8f6a;--d:#3f5a3d"><use href="#domtoren"/></svg>
-          <svg class="tower" viewBox="0 0 90 440" style="--t:#c0503a;--d:#7a2a1c"><use href="#domtoren"/></svg>
-          <svg class="tower" viewBox="0 0 90 440" style="--t:#d8bd90;--d:#a58654"><use href="#domtoren"/></svg>
-          <svg class="tower" viewBox="0 0 90 440" style="--t:#a794c2;--d:#6a5888"><use href="#domtoren"/></svg>
-          <svg class="tower" viewBox="0 0 90 440" style="--t:#a8281c;--d:#fbf5ea"><use href="#domtoren"/></svg>
-        </div>
-        <div class="plinth" aria-hidden="true"></div>
-        <figcaption>Illustratie, geen productfoto. De kleuren zijn een indicatie.</figcaption>
+      <figure class="photo">
+        <img src="assets/premium-domtoren.jpg" width="960" height="1280"
+             alt="De Premium Utrecht Edition van de Domtoren op een boekenplank, naast een plant: onderin rood, bovenin wit, met een diagonale scheiding zoals de Utrechtse vlag">
+        <figcaption>De Premium Utrecht Edition, rood en wit verdeeld zoals de Utrechtse vlag.</figcaption>
       </figure>
     </div>
   </section>
@@ -96,34 +97,79 @@
       <div class="section-head">
         <p class="kicker">De Domtoren</p>
         <h2 id="domtoren-titel">Twee uitvoeringen van hetzelfde ontwerp</h2>
-        <p>Een miniatuur van de Domtoren, ontworpen op 22 cm hoog. Voor op de kast, de vensterbank of als cadeau voor iemand die van Utrecht houdt.</p>
+        <p>Een miniatuur van de Domtoren, standaard 22 cm hoog. Voor op de kast, de vensterbank of als cadeau voor iemand die van Utrecht houdt.</p>
       </div>
-      <div class="cards">
-        <article class="card">
-          <p class="tag">Classic</p>
-          <h3>In vier kleuren</h3>
-          <p>De Classic is er in groen, terracotta, zandkleur en lila.</p>
-          <ul class="swatches" aria-label="Kleuren van de Classic">
-            <li><i style="--c:#6f8f6a"></i>Groen</li>
-            <li><i style="--c:#c0503a"></i>Terracotta</li>
-            <li><i style="--c:#d8bd90"></i>Zandkleur</li>
-            <li><i style="--c:#a794c2"></i>Lila</li>
+      <div class="showcase">
+        <div class="cards">
+          <article class="card">
+            <p class="tag">Classic</p>
+            <h3>In vier kleuren</h3>
+            <p>De Classic is er in groen, terracotta, zandkleur en lila.</p>
+            <ul class="swatches" aria-label="Kleuren van de Classic">
+              <li><i style="--c:#6f8f6a"></i>Groen</li>
+              <li><i style="--c:#c0503a"></i>Terracotta</li>
+              <li><i style="--c:#d8bd90"></i>Zandkleur</li>
+              <li><i style="--c:#a794c2"></i>Lila</li>
+            </ul>
+          </article>
+          <article class="card">
+            <p class="tag">Premium Utrecht Edition</p>
+            <h3>Rood en wit, zoals de vlag</h3>
+            <p>De Utrecht Edition is diagonaal verdeeld in rood en wit, naar de vlag van Utrecht.</p>
+            <ul class="swatches" aria-label="Kleuren van de Utrecht Edition">
+              <li><i style="--c:#c8241c"></i>Rood</li>
+              <li><i style="--c:#fbfaf6"></i>Wit</li>
+            </ul>
+          </article>
+        </div>
+
+        <figure class="shelf" role="img" aria-label="Illustratie van de Domtoren in vijf uitvoeringen">
+          <div class="row" aria-hidden="true">
+            <svg class="tower" viewBox="0 0 90 440"><use href="#domtoren" style="--t:#6f8f6a;--d:#3f5a3d"/></svg>
+            <svg class="tower" viewBox="0 0 90 440"><use href="#domtoren" style="--t:#c0503a;--d:#7a2a1c"/></svg>
+            <svg class="tower" viewBox="0 0 90 440"><use href="#domtoren" style="--t:#d8bd90;--d:#a58654"/></svg>
+            <svg class="tower" viewBox="0 0 90 440"><use href="#domtoren" style="--t:#a794c2;--d:#6a5888"/></svg>
+            <svg class="tower" viewBox="0 0 90 440">
+              <use href="#domtoren" style="--t:#fbfaf6;--d:#d2cbbe"/>
+              <use href="#domtoren" style="--t:#c8241c;--d:#7a1810" clip-path="url(#vlag-rood)"/>
+            </svg>
+          </div>
+          <div class="plinth" aria-hidden="true"></div>
+          <figcaption>Illustratie, geen productfoto. De kleuren zijn een indicatie.</figcaption>
+        </figure>
+      </div>
+
+      <p class="note"><strong>Andere maat of kleur?</strong> 22 cm is de standaard en de kleuren hierboven zijn de basis. Op verzoek maak ik ook andere maten en kleuren. Stuur me een mail met wat je zoekt.</p>
+    </div>
+  </section>
+
+  <section id="bedrijven" aria-labelledby="bedrijven-titel">
+    <div class="wrap">
+      <div class="business">
+        <div>
+          <p class="kicker">Voor bedrijven</p>
+          <h2 id="bedrijven-titel">Een eigen Domtoren voor je bedrijf of relaties</h2>
+          <p class="lead">Zoek je een relatiegeschenk, een jubileumcadeau of iets voor in de ontvangstruimte? Ik maak gepersonaliseerde Domtorens in eigen kleuren en maten. Mail me wat je in gedachten hebt, dan kijk ik wat mogelijk is en stuur ik je een voorstel.</p>
+          <div class="actions">
+            <a class="btn" href="mailto:studiorossa.utrecht@gmail.com?subject=Gepersonaliseerde%20Domtoren%20voor%20ons%20bedrijf&amp;body=Hallo%20Studio%20Rossa%2C%0A%0AWij%20hebben%20interesse%20in%20gepersonaliseerde%20Domtorens.%0A%0ABedrijf%3A%0AAantal%3A%0AMaat%20(standaard%2022%20cm)%3A%0AKleuren%3A%0AWat%20moet%20er%20persoonlijk%20zijn%3A%0AGewenste%20datum%3A%0A%0AMet%20vriendelijke%20groet%2C%0A">Mail je wens</a>
+          </div>
+        </div>
+        <div class="checklist">
+          <h3>Handig om te vermelden</h3>
+          <ul>
+            <li>Voor welk bedrijf of welke gelegenheid</li>
+            <li>Hoeveel Domtorens je nodig hebt</li>
+            <li>Maat en kleuren, als het anders moet dan standaard</li>
+            <li>Wat er persoonlijk aan moet zijn</li>
+            <li>Tegen wanneer je ze wilt hebben</li>
           </ul>
-        </article>
-        <article class="card">
-          <p class="tag">Premium Utrecht Edition</p>
-          <h3>In rood en wit</h3>
-          <p>De Utrecht Edition draagt de kleuren van de stad: rood en wit.</p>
-          <ul class="swatches" aria-label="Kleuren van de Utrecht Edition">
-            <li><i style="--c:#a8281c"></i>Rood</li>
-            <li><i style="--c:#fbf5ea"></i>Wit</li>
-          </ul>
-        </article>
+          <p class="muted">Staat je wens er nog niet bij? Mail het gewoon.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section id="werkwijze" aria-labelledby="werkwijze-titel">
+  <section id="werkwijze" class="alt" aria-labelledby="werkwijze-titel">
     <div class="wrap">
       <div class="section-head">
         <p class="kicker">Werkwijze</p>
@@ -146,7 +192,7 @@
     </div>
   </section>
 
-  <section id="contact" class="alt" aria-labelledby="contact-titel">
+  <section id="contact" aria-labelledby="contact-titel">
     <div class="wrap">
       <div class="contact">
         <div>
