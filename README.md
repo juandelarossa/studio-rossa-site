@@ -19,6 +19,8 @@ Website van Studio Rossa, live op https://studiorossa.nl via GitHub Pages (tak `
 - De uitleg over Studio Rossa MCP op de startpagina en in de privacyverklaring blijft staan. De Google-verificatie van de app verwijst ernaar.
 - De bedrijvensectie gebruikt een `mailto:`-link met een ingevulde vragenlijst. Er is geen formulier of server, dus er worden geen gegevens op de site verzameld.
 - Etsy-link: zodra de shop open is, zoek je op `ETSY-LINK` in `index.html`. Er zijn twee plekken (bovenaan bij de knoppen en onder de uitvoeringen). Vervang daar het element `<span class="btn soon">` door `<a class="btn" href="URL-VAN-DE-SHOP">Naar de Etsy-shop</a>` en pas ook de regel "Binnenkort via Etsy" bovenaan aan.
+- Het mailsjabloon in de bedrijvensectie staat op twee plekken: zichtbaar in `<pre id="mail-template">` en als `body=` in de mailto-link. Houd die gelijk. Het kleine script onderaan `index.html` toont de kopieerknop en maakt geen verbindingen.
+- De toren krijgt geen geslacht in teksten: "de toren", "de Dom" of "die", niet "hij" of "hem".
 - Bedrijfsaanvraag: een `mailto:`-link kan geen bijlage meesturen. De tekst vraagt daarom om het logo als bijlage bij de mail. Een echte uploadknop vraagt een extern formulier en een aanpassing van de privacyverklaring.
 - Geen prijzen, levertijden of kwaliteitsclaims op de site voordat die zijn vastgesteld.
 - `main` is live. Wijzigingen gaan eerst via een branch en worden pas samengevoegd na akkoord van Johan.
