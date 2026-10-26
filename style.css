@@ -1,6 +1,31 @@
 /* Studio Rossa
    Palet uit de artwork: crème papier, terracotta, baksteenrood, donkerbruin.
-   Geen externe fonts of scripts: de site laadt alleen eigen bestanden. */
+   Lettertypen (Fraunces voor koppen, Outfit voor tekst) staan in assets/fonts en zijn
+   vrij te gebruiken onder de SIL Open Font License. Er wordt niets extern geladen. */
+
+@font-face {
+  font-family: "Fraunces";
+  src: url("assets/fonts/fraunces-latin-wght-normal.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Fraunces";
+  src: url("assets/fonts/fraunces-latin-wght-italic.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url("assets/fonts/outfit-latin-wght-normal.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
 
 :root {
   --paper: #f5ebd9;
@@ -11,7 +36,8 @@
   --muted: #6b5a4f;
   --line: rgba(70, 49, 40, 0.14);
   --radius: 20px;
-  --font: "Avenir Next", Montserrat, "Segoe UI", system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  --font: "Outfit", "Avenir Next", "Segoe UI", system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  --display: "Fraunces", "Iowan Old Style", Georgia, "Times New Roman", serif;
   color-scheme: light;
 }
 
@@ -23,7 +49,7 @@ body {
   margin: 0;
   background: var(--paper);
   color: var(--brown);
-  font: 17px/1.65 var(--font);
+  font: 18px/1.65 var(--font);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -87,14 +113,21 @@ a:hover { color: var(--terracotta); }
 
 h1, h2, h3 {
   margin: 0;
-  line-height: 1.15;
-  font-weight: 700;
-  letter-spacing: -0.01em;
+  font-family: var(--display);
+  line-height: 1.1;
+  font-weight: 600;
+  letter-spacing: -0.015em;
 }
 
-h1 { font-size: clamp(2.4rem, 5.6vw, 4.2rem); }
-h2 { font-size: clamp(1.7rem, 3.4vw, 2.3rem); }
-h3 { font-size: 1.25rem; }
+h1 { font-size: clamp(2.5rem, 5.6vw, 4.2rem); line-height: 1.04; }
+h2 { font-size: clamp(1.9rem, 3.6vw, 2.6rem); }
+h3 { font-size: 1.35rem; }
+
+h1 em {
+  font-style: italic;
+  font-weight: 500;
+  color: var(--brick);
+}
 
 p { margin: 0 0 1em; }
 
@@ -207,7 +240,7 @@ p { margin: 0 0 1em; }
 
 .shelf .grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr) 1px 1fr;
+  grid-template-columns: repeat(4, minmax(0, 1fr)) 1px minmax(0, 1fr);
   column-gap: 4%;
   align-items: end;
 }
@@ -220,6 +253,7 @@ p { margin: 0 0 1em; }
 
 .shelf .label {
   grid-row: 2;
+  white-space: nowrap;
   margin-top: 14px;
   padding-bottom: 14px;
   color: var(--brick);
@@ -231,9 +265,9 @@ p { margin: 0 0 1em; }
 }
 
 .shelf .label.classic { grid-column: 1 / 5; }
-.shelf .label.premium { grid-column: 6; }
+.shelf .label.premium { grid-column: 6; justify-self: center; }
 
-.tower { width: 100%; height: auto; filter: drop-shadow(0 0 0.6px rgba(70, 49, 40, 0.5)); }
+.tower { width: 100%; height: auto; filter: drop-shadow(0 0 0.8px rgba(70, 49, 40, 0.6)); }
 
 .plinth {
   height: 3px;
@@ -343,46 +377,51 @@ section { padding: 72px 0; }
 
 .story-grid {
   display: grid;
-  grid-template-columns: 1.3fr 0.7fr;
-  gap: 64px;
-  align-items: start;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 72px;
+  align-items: center;
+}
+
+.quote {
+  position: relative;
+  margin: 0;
+  padding: 56px 0 0;
+}
+
+.quote::before {
+  content: "\201C";
+  position: absolute;
+  top: -28px;
+  left: -6px;
+  font-family: var(--display);
+  font-size: 9rem;
+  line-height: 1;
+  color: var(--terracotta);
+}
+
+.quote p {
+  margin: 0 0 20px;
+  font-family: var(--display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(1.8rem, 3.4vw, 2.6rem);
+  line-height: 1.2;
+  color: var(--paper-light);
+}
+
+.quote footer {
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #eba88f;
 }
 
 .story-text p { max-width: 38em; }
 
-.timeline {
-  margin: 0;
-  padding: 8px 0 8px 28px;
-  list-style: none;
-  border-left: 2px solid rgba(245, 235, 217, 0.25);
-}
-
-.timeline li { position: relative; padding: 0 0 36px; }
-.timeline li:last-child { padding-bottom: 0; }
-
-.timeline li::before {
-  content: "";
-  position: absolute;
-  left: -37px;
-  top: 14px;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  background: var(--terracotta);
-  border: 3px solid var(--brown);
-}
-
-.timeline b {
-  display: block;
-  font-size: 2.6rem;
-  line-height: 1.1;
-  color: #eba88f;
-}
-
-.timeline span { color: #e9dcc7; }
-
 .facts-title {
   margin: 64px 0 20px;
+  font-family: var(--font);
   color: var(--paper-light);
   font-size: 0.82rem;
   font-weight: 600;
@@ -405,6 +444,8 @@ section { padding: 72px 0; }
 
 .fact b {
   display: block;
+  font-family: var(--display);
+  font-weight: 600;
   margin-bottom: 8px;
   font-size: clamp(2.4rem, 5vw, 3.4rem);
   line-height: 1.05;
@@ -435,7 +476,7 @@ section { padding: 72px 0; }
   grid-template-columns: 1fr 260px;
   gap: 56px;
   align-items: center;
-  margin-bottom: 56px;
+  margin-bottom: 0;
 }
 
 .maker h2 { font-size: clamp(2rem, 4.4vw, 3rem); margin-bottom: 18px; }
@@ -452,35 +493,6 @@ section { padding: 72px 0; }
   transform: rotate(-8deg);
   filter: drop-shadow(0 14px 18px rgba(70, 49, 40, 0.25));
 }
-
-.steps {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  counter-reset: stap;
-}
-
-.steps li {
-  padding: 28px 28px 8px 0;
-  border-top: 3px solid var(--terracotta);
-  counter-increment: stap;
-}
-
-.steps li::before {
-  content: "0" counter(stap);
-  display: block;
-  margin-bottom: 14px;
-  color: var(--brick);
-  font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.22em;
-}
-
-.steps h3 { margin-bottom: 8px; }
-.steps p { color: var(--muted); }
 
 /* Bedrijven */
 
@@ -585,7 +597,7 @@ section { padding: 72px 0; }
   .arch { width: min(100%, 440px); }
   .hero .wrap { grid-template-columns: 1fr; gap: 40px; }
   section { padding: 52px 0; }
-  .cards, .steps, .showcase, .business, .maker, .story-grid, .facts { grid-template-columns: 1fr; }
+  .cards, .showcase, .business, .maker, .story-grid, .facts { grid-template-columns: 1fr; }
   .story-grid { gap: 40px; }
   .maker { gap: 36px; }
   .stamp { width: 200px; margin: 0 auto; order: -1; }
@@ -602,10 +614,11 @@ section { padding: 72px 0; }
 }
 
 @media (max-width: 520px) {
-  .nav { gap: 16px; font-size: 0.9rem; }
+  .nav { display: grid; grid-template-columns: repeat(3, auto); justify-content: start; gap: 4px 26px; font-size: 0.92rem; }
   .brand img { height: 68px; }
   .shelf { padding: 24px 16px 0; }
   .plinth { margin: 0 -16px; }
+  .shelf .label { letter-spacing: 0.1em; font-size: 0.66rem; }
   .contact .btn { font-size: 0.85rem; padding-inline: 18px; text-align: center; overflow-wrap: anywhere; }
 }
 
