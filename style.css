@@ -104,6 +104,8 @@ a:hover { color: var(--terracotta); }
 
 .kicker {
   margin: 0 0 14px;
+  font-family: var(--font);
+  line-height: 1.2;
   color: var(--brick);
   font-size: 0.82rem;
   font-weight: 600;
@@ -176,26 +178,6 @@ p { margin: 0 0 1em; }
   grid-template-columns: 1fr 1fr;
   gap: 64px;
   align-items: center;
-}
-
-.status {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: 8px;
-  padding: 8px 16px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: var(--paper-light);
-  font-size: 0.9rem;
-}
-
-.status::before {
-  content: "";
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: var(--terracotta);
 }
 
 .photo { margin: 0; }
@@ -373,50 +355,34 @@ section { padding: 72px 0; }
 
 .story { background: var(--brown); color: var(--paper); }
 .story .kicker { color: #eba88f; }
-.story h2 { color: var(--paper-light); font-size: clamp(2rem, 4.6vw, 3.2rem); max-width: 16em; margin-bottom: 24px; }
+.story h2.kicker { color: #eba88f; font-size: 0.82rem; letter-spacing: 0.26em; margin: 0 0 18px; max-width: none; }
 .story p { color: #e9dcc7; }
 .story .big { font-size: 1.2rem; color: var(--paper-light); }
 
 .story-grid {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 72px;
+  grid-template-columns: 1fr;
+  gap: 56px;
   align-items: center;
 }
 
-.quote {
-  position: relative;
-  margin: 0;
-  padding: 56px 0 0;
+.story-grid.with-photo { grid-template-columns: 1.1fr 0.9fr; }
+
+.story-photo { margin: 0; }
+
+.story-photo img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: 0 24px 50px -26px rgba(0, 0, 0, 0.6);
 }
 
-.quote::before {
-  content: "\201C";
-  position: absolute;
-  top: -28px;
-  left: -6px;
-  font-family: var(--display);
-  font-size: 9rem;
-  line-height: 1;
-  color: var(--terracotta);
-}
-
-.quote p {
-  margin: 0 0 20px;
-  font-family: var(--display);
-  font-style: italic;
-  font-weight: 500;
-  font-size: clamp(1.8rem, 3.4vw, 2.6rem);
-  line-height: 1.2;
-  color: var(--paper-light);
-}
-
-.quote footer {
+.story-photo figcaption {
+  padding-top: 10px;
   font-size: 0.82rem;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: #eba88f;
+  color: #cdbfa9;
 }
 
 .story-text p { max-width: 38em; }
@@ -499,62 +465,10 @@ section { padding: 72px 0; }
 /* Bedrijven */
 
 .business {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 48px;
-  align-items: start;
+  max-width: 44em;
 }
 
 .business .lead { max-width: none; }
-
-.checklist {
-  padding: 28px;
-  border-radius: var(--radius);
-  background: var(--paper-light);
-  border: 1px solid var(--line);
-}
-
-.checklist h3 { margin-bottom: 10px; font-size: 1.15rem; }
-
-.template {
-  margin: 16px 0;
-  padding: 18px 20px;
-  border: 1px dashed rgba(70, 49, 40, 0.35);
-  border-radius: 14px;
-  background: var(--paper);
-  font: 0.92rem/1.7 var(--font);
-  white-space: pre-wrap;
-  overflow-wrap: anywhere;
-}
-
-.checklist .btn { margin-bottom: 14px; }
-.muted.small { font-size: 0.88rem; }
-
-.checklist ul {
-  margin: 0 0 16px;
-  padding: 0;
-  list-style: none;
-}
-
-.checklist li {
-  position: relative;
-  padding: 7px 0 7px 26px;
-  border-bottom: 1px solid var(--line);
-  font-size: 0.97rem;
-}
-
-.checklist li::before {
-  content: "";
-  position: absolute;
-  left: 2px;
-  top: 15px;
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: var(--terracotta);
-}
-
-.checklist .muted { margin: 0; font-size: 0.92rem; }
 
 /* Contact */
 
@@ -613,8 +527,8 @@ section { padding: 72px 0; }
   .arch { width: min(100%, 440px); }
   .hero .wrap { grid-template-columns: 1fr; gap: 40px; }
   section { padding: 52px 0; }
-  .cards, .showcase, .business, .maker, .story-grid, .facts { grid-template-columns: 1fr; }
-  .story-grid { gap: 40px; }
+  .cards, .showcase, .maker, .facts { grid-template-columns: 1fr; }
+  .story-grid, .story-grid.with-photo { grid-template-columns: 1fr; gap: 40px; }
   .maker { gap: 36px; }
   .stamp { width: 200px; margin: 0 auto; order: -1; }
   .business { gap: 32px; }
