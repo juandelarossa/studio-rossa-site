@@ -26,13 +26,8 @@ Website van Studio Rossa, live op https://studiorossa.nl via GitHub Pages (tak `
 - Geen prijzen, levertijden of kwaliteitsclaims op de site voordat die zijn vastgesteld.
 - `main` is live. Wijzigingen gaan eerst via een branch en worden pas samengevoegd na akkoord van Johan.
 
-## Foto van de Dom (nog te plaatsen)
+## Foto van de Dom
 
-In de sectie "Het verhaal" is plek voor een foto van de echte Domtoren, naast de tekst. Zoek in `index.html` op `FOTO-DOM`. Zo plaats je de foto:
-
-1. Zet de foto in `assets/` als `dom-utrecht.jpg` (staand 4:5, ongeveer 1000 px breed, onder 200 KB, zonder locatiegegevens).
-2. Geef `<div class="story-grid">` de extra klasse `with-photo`.
-3. Zet op de plek van de opmerking `<figure class="story-photo"><img src="assets/dom-utrecht.jpg" width="1000" height="1250" alt="..."><figcaption>...</figcaption></figure>`.
-4. Komt de foto niet van Johan zelf, vermeld dan de maker en de licentie in de bijschrift.
+In de sectie "Het verhaal" staat een zelfgemaakte foto van Johan (`assets/dom-utrecht.jpg`, staand 4:5, zonder locatiegegevens). De foto is bijgesneden: onderaan stonden auto's met kentekens en voorbijgangers, en rechts een hotelbord. Houd dat er ook bij een nieuwe uitsnede buiten. Een andere foto vervangen gaat door het bestand te overschrijven, of door de `src` en de `alt` in `index.html` aan te passen. Komt een foto niet van Johan zelf, vermeld dan de maker en de licentie in een `<figcaption>`.
 
 Aansturing en beleid staan in de repository `studio-rossa` (zie het onderdeel Website in `CLAUDE.md`).
