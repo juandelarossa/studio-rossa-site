@@ -18,7 +18,7 @@ Website van Studio Rossa, live op https://studiorossa.nl via GitHub Pages (tak `
 - Elk `id` komt maar één keer voor. Het tekening-symbool van de toren heet `toren`, de sectie `domtoren`.
 - De uitleg over Studio Rossa MCP op de startpagina en in de privacyverklaring blijft staan. De Google-verificatie van de app verwijst ernaar.
 - De bedrijvensectie gebruikt een `mailto:`-link met een ingevulde vragenlijst. Er is geen formulier of server, dus er worden geen gegevens op de site verzameld.
-- Etsy-link: zodra de shop open is, zoek je op `ETSY-LINK` in `index.html`. Er zijn twee plekken (bovenaan bij de knoppen en onder de uitvoeringen). Vervang daar het element `<span class="btn soon">` door `<a class="btn" href="URL-VAN-DE-SHOP">Naar de Etsy-shop</a>` en pas ook de regel "Binnenkort via Etsy" bovenaan aan.
+- Etsy-link: de knoppen "Naar de Etsy-shop" in `index.html` (bovenaan en onder de uitvoeringen) wijzen naar https://www.etsy.com/nl/shop/StudioRossaNL (sinds 8 november 2026). Verandert de shoplink, pas dan beide plekken aan. De stijl `.btn.soon` in `style.css` is voor een knop die nog niet klikbaar is.
 - De mailtekst voor bedrijven staat alleen in de mailto-link van de knop "Mail je wens" (`body=`), met velden voor gegevens, wens en een regel voor het logo als bijlage. Er staat bewust geen uitleg of sjabloon op de pagina zelf en er is geen script.
 - Houd teksten kort. Johan vond de site eerder te tekstrijk (29 oktober 2026). Geen herhaling tussen secties.
 - De toren krijgt geen geslacht in teksten: "de toren", "de Dom" of "die", niet "hij" of "hem".
