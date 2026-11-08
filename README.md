@@ -10,7 +10,7 @@ Website van Studio Rossa, live op https://studiorossa.nl via GitHub Pages (tak `
 | `privacy.html` | Privacyverklaring, inclusief het onderdeel Studio Rossa MCP. |
 | `style.css` | Alle opmaak. Kleuren staan bovenaan als variabelen. |
 | `assets/fonts/` | Lettertypen Fraunces (koppen) en Outfit (tekst), zelf gehost, met hun licentie (SIL Open Font License). |
-| `assets/` | Logo, merkteken, favicons en deelafbeelding, gemaakt uit de artwork in Drive (Marketing/Artwork), plus de productfoto `premium-domtoren.jpg` (zonder EXIF/locatie). |
+| `assets/` | Logo, merkteken, favicons en deelafbeelding, gemaakt uit de artwork in Drive (Marketing/Artwork), plus de productfoto `premium-domtoren.jpg` (bovenaan, zonder EXIF/locatie) en vijf foto's `classic-<kleur>.jpg` (groen, terracotta, zandkleur, lila, donkerblauw) voor de galerij bij de uitvoeringen. De Classic-foto's zijn echte foto's op wit, 600 x 800 px, zonder EXIF. |
 
 ## Regels
 
