@@ -224,7 +224,7 @@ p { margin: 0 0 1em; }
 
 .shelf .grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr)) 1px minmax(0, 1fr);
+  grid-template-columns: repeat(5, minmax(0, 1fr)) 1px minmax(0, 1fr);
   column-gap: 4%;
   align-items: end;
 }
@@ -248,8 +248,8 @@ p { margin: 0 0 1em; }
   text-align: center;
 }
 
-.shelf .label.classic { grid-column: 1 / 5; }
-.shelf .label.premium { grid-column: 6; justify-self: center; }
+.shelf .label.classic { grid-column: 1 / 6; }
+.shelf .label.premium { grid-column: 7; justify-self: center; }
 
 .tower { width: 100%; height: auto; filter: drop-shadow(0 0 0.8px rgba(70, 49, 40, 0.6)); }
 
@@ -289,6 +289,36 @@ section { padding: 72px 0; }
 
 .showcase .cards { grid-template-columns: 1fr; }
 .showcase .shelf { background: var(--paper); }
+
+/* Foto's van de Classic */
+
+.gallery { margin-top: 56px; }
+.gallery h3 { margin: 0 0 20px; }
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.gallery-grid figure { margin: 0; }
+.gallery-grid img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  background: var(--paper);
+}
+.gallery-grid figcaption {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+.gallery-note { margin: 16px 0 0; font-size: 0.85rem; color: var(--muted); }
 
 .cta { margin-top: 24px; }
 
